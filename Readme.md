@@ -29,15 +29,25 @@ class TestComponent extends React.Component {
 
 describe('TestComponent', () => {
 
-  it('works', () => {
-	expectReactShallow(<TestComponent/>).to.have.rendered(<div>Hello React!</div>);  // OK
+ 	it('works', () => {
 
-	expectReactShallow(<TestComponent/>).to.have.exactly.rendered(<div className="foo">Hello React!</div>)  // OK
+ 		// OK
+		expectReactShallow(<TestComponent/>)
+			.to.have.rendered(<div>Hello React!</div>);
 
-	expectReactShallow(<TestComponent/>).to.have.exactly.rendered(<div/>)  // Error
+		// OK
+		expectReactShallow(<TestComponent/>)
+			.to.have.exactly.rendered(<div className="foo">Hello React!</div>);
 
-	expectReactShallow(<TestComponent/>).to.contain(<div/>)  // OK
-  });
+		// Error
+		expectReactShallow(<TestComponent/>)
+			.to.have.exactly.rendered(<div/>);
+
+		// OK
+		expectReactShallow(<TestComponent/>)
+			.to.contain(<div/>);
+
+	});
 
 });
 ```
