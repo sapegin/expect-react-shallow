@@ -58,7 +58,7 @@ See details in [unexpected-react-shallow docs](https://github.com/bruderstein/un
 
 ## Changelog
 
-The changelog can be found in the [Changelog.md](Changelog.md) file.
+The changelog can be found on the [Releases page](https://github.com/sapegin/expect-react-shallow/releases).
 
 
 ## Contributing
