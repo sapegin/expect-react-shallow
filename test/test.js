@@ -22,6 +22,7 @@ describe('expectReactShallow', () => {
 			expect(api.to.have.exactly.rendered).to.be.a.func;
 			expect(api.to.contain).to.be.a.func;
 			expect(api.to.contain.exactly).to.be.a.func;
+			expect(api.to.contain.with.all.children).to.be.a.func;
 		});
 
 	});
@@ -96,6 +97,21 @@ describe('expectReactShallow', () => {
 		it('should throw an error if the JSX not contains exactly another JSX', () => {
 			expect(
 				() => expectReactShallow(<TestComponent/>).to.contain.exactly(<div>Hello React!</div>)
+			).to.throw();
+		});
+
+	});
+
+	describe('expectReactShallow().to.contain.with.all.children()', () => {
+
+		it('should not throw an error if the JSX contains exactly another JSX', () => {
+			expect(
+				() => expectReactShallow(<TestComponent/>).to.contain.with.all.children(<div className="foo">Hello React!</div>)
+			).to.not.throw();
+		});
+		it('should throw an error if the JSX not contains exactly another JSX', () => {
+			expect(
+				() => expectReactShallow(<TestComponent/>).to.contain.with.all.children(<div/>)
 			).to.throw();
 		});
 
