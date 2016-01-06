@@ -61,6 +61,7 @@ expectReactShallow(ReactComponent|JSX).to.have.rendered.with.all.children(ReactC
 expectReactShallow(ReactComponent|JSX).to.have.exactly.rendered(ReactComponent|JSX);
 expectReactShallow(ReactComponent|JSX).to.contain(ReactComponent|JSX);
 expectReactShallow(ReactComponent|JSX).to.contain.exactly(ReactComponent|JSX);
+expectReactShallow(ReactComponent|JSX).to.contain.with.all.children(ReactComponent|JSX);
 ```
 
 See details in [unexpected-react-shallow docs](https://github.com/bruderstein/unexpected-react-shallow#assertions).
