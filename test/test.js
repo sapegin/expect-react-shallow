@@ -104,12 +104,12 @@ describe('expectReactShallow', () => {
 
 	describe('expectReactShallow().to.contain.with.all.children()', () => {
 
-		it('should not throw an error if the JSX contains exactly another JSX', () => {
+		it('should not throw an error if the JSX contains another JSX with all children', () => {
 			expect(
 				() => expectReactShallow(<TestComponent/>).to.contain.with.all.children(<div className="foo">Hello React!</div>)
 			).to.not.throw();
 		});
-		it('should throw an error if the JSX not contains exactly another JSX', () => {
+		it('should throw an error if the JSX not contains another JSX with all children', () => {
 			expect(
 				() => expectReactShallow(<TestComponent/>).to.contain.with.all.children(<div/>)
 			).to.throw();
