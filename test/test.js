@@ -23,6 +23,10 @@ describe('expectReactShallow', () => {
 			expect(api.to.contain).to.be.a.func;
 			expect(api.to.contain.exactly).to.be.a.func;
 			expect(api.to.contain.with.all.children).to.be.a.func;
+			expect(api.to.not.contain).to.be.a.func;
+			expect(api.to.not.contain.exactly).to.be.a.func;
+			expect(api.to.not.contain.with).to.be.a.func;
+			expect(api.to.not.contain.with.all.children).to.be.a.func;
 		});
 
 	});
@@ -112,6 +116,51 @@ describe('expectReactShallow', () => {
 		it('should throw an error if the JSX not contains another JSX with all children', () => {
 			expect(
 				() => expectReactShallow(<TestComponent/>).to.contain.with.all.children(<div/>)
+			).to.throw();
+		});
+
+	});
+
+	describe('expectReactShallow().to.not.contain()', () => {
+
+		it('should not throw an error if the JSX contains another JSX', () => {
+			expect(
+				() => expectReactShallow(<TestComponent/>).to.not.contain(<span/>)
+			).to.not.throw();
+		});
+		it('should throw an error if the JSX not contains another JSX', () => {
+			expect(
+				() => expectReactShallow(<TestComponent/>).to.not.contain(<div/>)
+			).to.throw();
+		});
+
+	});
+
+	describe('expectReactShallow().to.not.contain.exactly()', () => {
+
+		it('should not throw an error if the JSX contains exactly another JSX', () => {
+			expect(
+				() => expectReactShallow(<TestComponent/>).to.not.contain.exactly(<div>Hello React!</div>)
+			).to.not.throw();
+		});
+		it('should throw an error if the JSX not contains exactly another JSX', () => {
+			expect(
+				() => expectReactShallow(<TestComponent/>).to.not.contain.exactly(<div className="foo">Hello React!</div>)
+			).to.throw();
+		});
+
+	});
+
+	describe('expectReactShallow().to.not.contain.with.all.children()', () => {
+
+		it('should not throw an error if the JSX contains another JSX with all children', () => {
+			expect(
+				() => expectReactShallow(<TestComponent/>).to.not.contain.with.all.children(<div/>)
+			).to.not.throw();
+		});
+		it('should throw an error if the JSX not contains another JSX with all children', () => {
+			expect(
+				() => expectReactShallow(<TestComponent/>).to.not.contain.with.all.children(<div className="foo">Hello React!</div>)
 			).to.throw();
 		});
 
