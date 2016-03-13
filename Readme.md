@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sapegin/expect-react-shallow.svg)](https://travis-ci.org/sapegin/expect-react-shallow)
 
-A [Chai’s](http://chaijs.com) expect like API wrapper for [unexpected-react-shallow](https://github.com/bruderstein/unexpected-react-shallow). It also accepts JSX instead of ShallowRenderer instance.
+A [Chai’s](http://chaijs.com) expect like API wrapper for [unexpected-react](https://github.com/bruderstein/unexpected-react). It also accepts JSX instead of ShallowRenderer instance.
 
 ![expect-react-shallow](https://s3.amazonaws.com/f.cl.ly/items/1M3a3B163l392G1N3v25/Screen%20Shot%202015-11-12%20at%2022.39.57.png)
 
@@ -62,9 +62,12 @@ expectReactShallow(ReactComponent|JSX).to.have.exactly.rendered(ReactComponent|J
 expectReactShallow(ReactComponent|JSX).to.contain(ReactComponent|JSX);
 expectReactShallow(ReactComponent|JSX).to.contain.exactly(ReactComponent|JSX);
 expectReactShallow(ReactComponent|JSX).to.contain.with.all.children(ReactComponent|JSX);
+expectReactShallow(ReactComponent|JSX).to.not.contain(ReactComponent|JSX);
+expectReactShallow(ReactComponent|JSX).to.not.contain.exactly(ReactComponent|JSX);
+expectReactShallow(ReactComponent|JSX).to.not.contain.with.all.children(ReactComponent|JSX);
 ```
 
-See details in [unexpected-react-shallow docs](https://github.com/bruderstein/unexpected-react-shallow#assertions).
+See details in [unexpected-react docs](https://github.com/bruderstein/unexpected-react#assertions).
 
 
 ## Changelog

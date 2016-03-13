@@ -1,7 +1,7 @@
 {
   "name": "expect-react-shallow",
   "version": "1.1.0",
-  "description": "JSX assertions with Chai-like API (based on unexpected-react-shallow)",
+  "description": "JSX assertions with Chai-like API (based on unexpected-react)",
   "main": "lib/index.js",
   "scripts": {
     "test": "npm run lint && npm run mocha",
@@ -40,7 +40,7 @@
   "dependencies": {
     "react-addons-test-utils": "~0.14.2",
     "unexpected": "~10.1.0",
-    "unexpected-react-shallow": "~0.7.0"
+    "unexpected-react": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "~6.1.4",
