@@ -1,5 +1,6 @@
 # expect-react-shallow
 
+[![Powered by You](http://sapegin.github.io/powered-by-you/badge.svg)](http://sapegin.github.io/powered-by-you/)
 [![Build Status](https://travis-ci.org/sapegin/expect-react-shallow.svg)](https://travis-ci.org/sapegin/expect-react-shallow)
 
 A [Chai’s](http://chaijs.com) expect like API wrapper for [unexpected-react](https://github.com/bruderstein/unexpected-react). It also accepts JSX instead of ShallowRenderer instance.
